@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+#+TITLE: Faithful and Efficient Simulation of High Performance Linpack
+#+AUTHOR: Tom Cornebize, Arnaud Legrand, Christian Heinrich
+#+LANGUAGE: EN
+#+STARTUP: overview indent inlineimages logdrawer hidestars
+
+* Abstract
+With a power consumption of several MW per hour on a TOP500 machine,
+running applications on supercomputers at scale solely to optimize
+their performance is extremely expensive. Likewise, High-Performance Linpack (HPL),
+the benchmark used to rank supercomputers in the TOP500, requires a
+careful tuning of many parameters (problem size, grid arrangement,
+granularity, collective operation algorithms, etc.) and supports
+exploration of the most common and fundamental performance issues and
+their solutions. In this article, we explain how we both extended the
+SimGrid's SMPI simulator and slightly modified the open-source version
+of HPL to allow a fast emulation on a single commodity server at the
+scale of a supercomputer. We explain how to model the different
+components (network, BLAS, ...) and show that a careful modeling of
+both spatial and temporal node variability allows us to obtain faithful
+predictions within a few percents of real experiments.
+* Introduction
+* Platform calibration
+** MPI calibration
+** Kernels calibration
+** DGEMM calibration
+* Simulation
+* Real execution
