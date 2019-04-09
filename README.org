@@ -20,6 +20,40 @@ components (network, BLAS, ...) and show that a careful modeling of
 both spatial and temporal node variability allows us to obtain faithful
 predictions within a few percents of real experiments.
 * Introduction
+** Overview
+This document contains links to experimental results as well as a guideline on
+how to reproduce them. We used the [[https://www.grid5000.fr/][Grid5000]] testbed for all our experiments.
+** Peanut, the experiment engine
+We extensively used [[https://github.com/Ezibenroc/peanut/][peanut]], a tool to automatically deploy and run experiments
+on Grid5000. The result produced by this tool is a =.zip= archive containing at
+least these files:
+- =info.yaml= contains various information about the job such as:
+  + ID of the job
+  + command used to run this experiment
+  + OS image used for the deployment
+  + git hash of =peanut= at the time
+  + list of the nodes used for the experiment
+  + git repositories cloned for this experiment
+  + versions of the kernel, GCC and MPI
+- =oarstat.yaml= contains information about the job reservation itself (e.g.,
+  start and stop times)
+- =commands.log= contains a human-readable dump of all the commands executed for
+  the experiment, both on the frontend node and the compute nodes
+- =history.json= contains a dump of all the commands executed, with their return
+  code, output (both stdout and stderr), start and stop times
+- =information= is a directory containing one subdirectory per node, each one
+  holding relevant information about the node like a copy of =/proc/cpuinfo= or
+  the output of the command =env=
+
+In addition, the archives will usally contain files specific to a given
+experiment. These files may be:
+- install files, describing some configurations for the installation of the
+  nodes (e.g., should we run a complete execution of HPL, or only the first
+  iterations)
+- experiment files, describing relevant parameters (e.g., the matrix rank and
+  the broadcast algorithm for HPL)
+- result files, describing the result of the experiment (e.g., the duration and
+  performance of the HPL runs)
 * Platform calibration
 ** MPI calibration
 ** Kernels calibration
