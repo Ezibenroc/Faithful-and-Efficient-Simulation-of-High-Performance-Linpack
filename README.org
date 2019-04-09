@@ -77,4 +77,16 @@ for i in {1..32} ; do
 done
 #+end_src
 * Simulation
+** Complete execution
+** Partial execution with tracing
 * Real execution
+** Complete execution
+** Partial execution with tracing
+Very similar to the kernel calibration, this time we control exactly which nodes
+we want.
+#+begin_src sh :results output :exports both
+python -m peanut HPL run tocornebize --deploy debian9-x64-base --walltime 01:00:00 \
+       --nodes dahu-1 dahu-2 dahu-3 dahu-4 dahu-5 dahu-6 dahu-7 dahu-8 --nbnodes 8  \
+       --installfile exp_input/real_execution/tracing/install.yaml --batch
+       --expfile exp_input/real_execution/tracing/exp.csv \
+#+end_src
