@@ -79,6 +79,11 @@ done
 * Simulation
 ** Complete execution
 ** Partial execution with tracing
+#+begin_src sh :results output :exports both
+python -m peanut SMPIHPL run tocornebize --deploy debian9-x64-base --cluster dahu --nbnodes 1 \
+       --walltime 01:00:00 --expfile exp_input/simulation/tracing/{exp.csv,dahu.xml} \
+       --installfile exp_input/simulation/tracing/install.yaml --batch
+#+end_src
 * Real execution
 ** Complete execution
 #+begin_src sh :results output :exports both

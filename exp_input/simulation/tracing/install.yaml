@@ -1,0 +1,7 @@
+trace_execution: True
+terminate_early: True
+insert_bcast: True
+stochastic_network: True
+stochastic_cpu: True
+polynomial_dgemm: True
+heterogeneous_dgemm: True
