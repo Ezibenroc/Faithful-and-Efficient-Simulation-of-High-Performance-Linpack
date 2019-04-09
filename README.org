@@ -64,5 +64,12 @@ python -m peanut MPICalibration run tocornebize --cluster dahu --deploy debian9-
 #+end_src
 ** Kernels calibration
 ** DGEMM calibration
+#+begin_src sh :results output :exports both
+for i in {1..32} ; do
+    python -m peanut BLASCalibration run tocornebize --deploy debian9-x64-base --nodes dahu-$i \
+           --nbnodes 1 --walltime 03:30:00 --expfile exp_input/dgemm_calibration/exp.csv --batch
+    sleep 3  # to be nice with the job scheduler of the cluster
+done
+#+end_src
 * Simulation
 * Real execution
