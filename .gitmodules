@@ -1,0 +1,12 @@
+[submodule "platform_calibration"]
+	path = platform_calibration
+	url = https://github.com/Ezibenroc/platform-calibration.git
+[submodule "peanut"]
+	path = peanut
+	url = https://github.com/Ezibenroc/peanut.git
+[submodule "hpl"]
+	path = hpl
+	url = https://github.com/Ezibenroc/hpl.git
+[submodule "calibration_analysis"]
+	path = calibration_analysis
+	url = https://github.com/Ezibenroc/calibration_analysis.git
