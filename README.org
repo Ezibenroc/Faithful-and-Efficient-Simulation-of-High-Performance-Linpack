@@ -4,6 +4,23 @@
 #+LANGUAGE: EN
 #+STARTUP: overview indent inlineimages logdrawer hidestars
 
+* Table of content                                                      :TOC:
+- [[#abstract][Abstract]]
+- [[#introduction][Introduction]]
+  - [[#overview][Overview]]
+  - [[#dependencies][Dependencies]]
+  - [[#peanut-the-experiment-engine][Peanut, the experiment engine]]
+- [[#platform-calibration][Platform calibration]]
+  - [[#mpi-calibration][MPI calibration]]
+  - [[#kernel-calibration][Kernel calibration]]
+  - [[#dgemm-calibration][DGEMM calibration]]
+- [[#simulation][Simulation]]
+  - [[#complete-execution][Complete execution]]
+  - [[#partial-execution-with-tracing][Partial execution with tracing]]
+- [[#real-execution][Real execution]]
+  - [[#complete-execution-1][Complete execution]]
+  - [[#partial-execution-with-tracing-1][Partial execution with tracing]]
+
 * Abstract
 With a power consumption of several MW per hour on a TOP500 machine,
 running applications on supercomputers at scale solely to optimize
