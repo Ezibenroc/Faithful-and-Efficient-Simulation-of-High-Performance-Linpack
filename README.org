@@ -78,10 +78,23 @@ done
 #+end_src
 * Simulation
 ** Complete execution
+Note: here, we launch several independent jobs to run different simulations in parallel.
+#+begin_src sh :results output :exports both
+for mode in exp_input/simulation/complete/{heterogeneous,homogeneous}; do
+    for exp in exp_input/simulation/complete/exp_*.csv; do
+        for ins in ${mode}/install_*.yaml; do
+            python -m peanut SMPIHPL run tocornebize --deploy debian9-x64-base --cluster dahu \
+                   --nbnodes 1 --walltime 14:00:00 --expfile ${exp} exp_input/simulation/dahu.xml \
+                   --installfile ${ins} --batch
+            sleep 3  # to be nice with the job scheduler of the cluster
+        done
+    done
+done
+#+end_src
 ** Partial execution with tracing
 #+begin_src sh :results output :exports both
 python -m peanut SMPIHPL run tocornebize --deploy debian9-x64-base --cluster dahu --nbnodes 1 \
-       --walltime 01:00:00 --expfile exp_input/simulation/tracing/{exp.csv,dahu.xml} \
+       --walltime 01:00:00 --expfile exp_input/simulation/{dahu.xml,tracing/exp.csv} \
        --installfile exp_input/simulation/tracing/install.yaml --batch
 #+end_src
 * Real execution
