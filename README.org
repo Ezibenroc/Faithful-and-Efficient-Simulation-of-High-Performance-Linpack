@@ -40,6 +40,17 @@ predictions within a few percents of real experiments.
 ** Overview
 This document contains links to experimental results as well as a guideline on
 how to reproduce them. We used the [[https://www.grid5000.fr/][Grid5000]] testbed for all our experiments.
+
+The structure of this repository is the following:
+- In [[file:exp_input][exp_input]] are located the inputs of each experiment (=.csv= files with
+  eventual =.xml= and =.yaml= files)
+- In [[file:exp_output][exp_output]] are located the outputs of each experiment (=.zip= files)
+- In [[file:exp_analysis][exp_analysis]] are located the analysis that we made for each experiment
+  (=.ipynb files=)
+- The directory [[file:repositories][repositories]] contains submodules. They are pointers to the
+  different resources used by our scripts. They are not strictly needed here, as
+  the dependencies are installed with hard-links and a (small but relevant)
+  subset of the data has been copied in the repository.
 ** Dependencies
 One need to install a few Python packages to run the experiments and/or the
 analysis scripts. They can be installed with the following commands (make sure
