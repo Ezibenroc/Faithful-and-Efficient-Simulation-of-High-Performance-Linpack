@@ -106,8 +106,14 @@ experiment. These files may be:
   performance of the HPL runs)
 * Platform calibration
 To have a faithful model of an existing platform, it is essential to perform
-several calibrations.
+several calibrations of both the network and the computation kernels.
 ** MPI calibration
+The MPI calibration consists in performing a sequence of MPI operations while
+recording their durations. For instance, we perform a lot of ping-pong sequences
+with various message sizes.
+
+The code behing this can be found [[https://github.com/Ezibenroc/platform-calibration/blob/master/src/calibration/calibrate.c][here]]. The below command line uses this [[file:exp_input/mpi_calibration/][input]]
+produces this [[file:exp_output/mpi_calibration/][output]] which is then used by these [[file:exp_analysis/mpi_calibration/][notebooks]].
 #+begin_src sh :results output :exports both
 python -m peanut MPICalibration run tocornebize --cluster dahu --deploy debian9-x64-base \
        --walltime 00:30:00 --nbnodes 2 --expfile exp_input/mpi_calibration/exp.csv --batch
