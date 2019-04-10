@@ -74,15 +74,15 @@ pip install --user https://github.com/Ezibenroc/pytree/releases/download/0.0.6/p
 pip install --user https://github.com/Ezibenroc/peanut/releases/download/0.0.0/peanut-0.0.0-py3-none-any.whl
 #+end_src
 ** Peanut, the experiment engine
-We extensively used [[https://github.com/Ezibenroc/peanut/][peanut]], a tool to automatically deploy and run experiments
-on Grid5000. The result produced by this tool is a =.zip= archive containing at
-least these files:
+We extensively used [[https://github.com/Ezibenroc/peanut/][peanut]], a tool we developed to automatically deploy and run
+experiments on Grid5000. The result produced by this tool is a =.zip= archive
+containing at least these files:
 - =info.yaml= contains various information about the job such as:
   + ID of the job
   + command used to run this experiment
   + OS image used for the deployment
   + git hash of =peanut= at the time
-  + list of the nodes used for the experiment
+  + list of the nodes used for this experiment
   + git repositories cloned for this experiment
   + versions of the kernel, GCC and MPI
 - =oarstat.yaml= contains information about the job reservation itself (e.g.,
