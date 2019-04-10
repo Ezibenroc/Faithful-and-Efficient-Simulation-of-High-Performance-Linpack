@@ -10,3 +10,9 @@
 [submodule "calibration_analysis"]
 	path = repositories/calibration_analysis
 	url = https://github.com/Ezibenroc/calibration_analysis.git
+[submodule "paper_src"]
+	path = repositories/paper_src
+	url = https://github.com/Ezibenroc/HPL-paper.git
+[submodule "old_journal"]
+	path = repositories/old_journal
+	url = https://github.com/Ezibenroc/simulating_mpi_applications_at_scale.git
