@@ -95,7 +95,7 @@ least these files:
   holding relevant information about the node like a copy of =/proc/cpuinfo= or
   the output of the command =env=
 
-In addition, the archives will usally contain files specific to a given
+In addition, the archives will usually contain files specific to a given
 experiment. These files may be:
 - install files, describing some configurations for the installation of the
   nodes (e.g., should we run a complete execution of HPL, or only the first
