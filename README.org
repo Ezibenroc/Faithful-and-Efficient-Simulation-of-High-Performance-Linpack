@@ -228,7 +228,7 @@ python -m peanut HPL run tocornebize --deploy debian9-x64-base --cluster dahu --
        --installfile exp_input/real_execution/complete/install.yaml --batch
 #+end_src
 ** Partial execution with tracing
-This experiment is identical to the [[Kernel calibration][kernel calibration]] experiment, except that
+This experiment is identical to the [[#kernel-calibration][kernel calibration]] experiment, except that
 this time we control exactly which nodes we want. 
 
 There is no specific notebook for this experiment. The output is used in the
