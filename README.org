@@ -215,7 +215,8 @@ seems to be caused by a cooling issue affecting four nodes (namely,
 with the most recents runs of HPL, because the calibrations for dgemm and the
 other kernels have been done after the performance issue started happening.
 
-The output of this experiment is used in the simulation analysis.
+There is no specific notebook for this experiment. The output is used in the
+simulation analysis.
 
 |-------+--------|
 | [[file:exp_input/real_execution/complete/][input]] | [[file:exp_output/real_execution/complete/][output]] |
