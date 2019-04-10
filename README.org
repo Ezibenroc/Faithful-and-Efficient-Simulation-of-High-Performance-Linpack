@@ -212,7 +212,7 @@ times in March 2019. It appears that the performance in the most recent runs is
 significantly lower (~10%) than the oldest ones. After some investigations, this
 seems to be caused by a cooling issue affecting four nodes (namely,
 =dahu-{13,14,15,16}=). To validate our work, we compare the simulation predictions
-with the most recents runs of HPL, because the calibrations for dgemm and the
+with the most recent runs of HPL, because the calibrations for dgemm and the
 other kernels have been done after the performance issue started happening.
 
 There is no specific notebook for this experiment. The output is used in the
