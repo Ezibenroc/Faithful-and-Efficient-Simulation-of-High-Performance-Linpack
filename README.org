@@ -42,7 +42,8 @@ predictions within a few percents of real experiments.
 * Introduction
 ** Overview
 This document contains links to experimental results as well as a guideline on
-how to reproduce them. We used the [[https://www.grid5000.fr/][Grid5000]] testbed for all our experiments.
+how to reproduce them. We used the [[https://www.grid5000.fr/][Grid5000]] testbed for all our
+experiments. More precisely, we used the [[https://www.grid5000.fr/w/Grenoble:Hardware#dahu][dahu]] cluster, located in Grenoble.
 
 The article has been written using Emacs Org Mode. The source of the paper is
 freely available in this [[https://github.com/Ezibenroc/HPL-paper/][repository]]. In particular, the [[https://github.com/Ezibenroc/HPL-paper/blob/master/paper.org][main document]] contains
