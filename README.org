@@ -155,8 +155,21 @@ for i in {1..32} ; do
 done
 #+end_src
 * Simulation
+In the simulation, we use the models previously constructed.
 ** Complete execution
-Note: here, we launch several independent jobs to run different simulations in parallel.
+Here, we simulate several complete runs of HPL for the full cluster, with
+different matrix sizes. We try all the models mentioned in the article:
+deterministic or stochastic kernels, deterministic or stochastic network, linear
+or polynomial dgemm, homogeneous or heterogeneous dgemm.
+
+Note: here, we launch several independent jobs to run different simulations in
+parallel.
+
+The notebook in the analysis directory also uses outputs from the real
+execution, for comparison.
+|-------+--------+----------|
+| [[file:exp_input/simulation/complete/][input]] | [[file:exp_output/simulation/complete/][output]] | [[file:exp_analysis/simulation/complete/][analysis]] |
+|-------+--------+----------|
 #+begin_src sh :results output :exports both
 for mode in exp_input/simulation/complete/{heterogeneous,homogeneous}; do
     for exp in exp_input/simulation/complete/exp_*.csv; do
