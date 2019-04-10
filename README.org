@@ -136,6 +136,17 @@ python -m peanut HPL run tocornebize --deploy debian9-x64-base --cluster dahu --
        --installfile exp_input/kernel_calibration/install.yaml --batch
 #+end_src
 ** DGEMM calibration
+The dgemm calibration consists in performing a lot of calls to the dgemm
+function with various matrix sizes. Here, we calibrate this function in a
+single-threaded setting, by setting the =OMP_NUM_THREADS= environment variable to
+1 and pinning the thread to the desired core with =numactl=. We perform the
+calibration on all the cores in parallel (thus running 32 instances of the
+process), to make sure to be in the same conditions than a typical HPL run.
+
+|-------+--------+----------|
+| [[file:exp_input/dgemm_calibration/][input]] | [[file:exp_output/dgemm_calibration/][output]] | [[file:exp_analysis/dgemm_calibration/][analysis]] |
+|-------+--------+----------|
+
 #+begin_src sh :results output :exports both
 for i in {1..32} ; do
     python -m peanut BLASCalibration run tocornebize --deploy debian9-x64-base --nodes dahu-$i \
