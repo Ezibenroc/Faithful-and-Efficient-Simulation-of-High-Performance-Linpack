@@ -167,9 +167,11 @@ parallel.
 
 The notebook in the analysis directory also uses outputs from the real
 execution, for comparison.
+
 |-------+--------+----------|
 | [[file:exp_input/simulation/complete/][input]] | [[file:exp_output/simulation/complete/][output]] | [[file:exp_analysis/simulation/complete/][analysis]] |
 |-------+--------+----------|
+
 #+begin_src sh :results output :exports both
 for mode in exp_input/simulation/complete/{heterogeneous,homogeneous}; do
     for exp in exp_input/simulation/complete/exp_*.csv; do
@@ -183,6 +185,18 @@ for mode in exp_input/simulation/complete/{heterogeneous,homogeneous}; do
 done
 #+end_src
 ** Partial execution with tracing
+Similarly to the previous section, we simulate HPL with different matrix
+sizes. The code has been instrumented to trace the calls to the computation
+kernels and the MPI primitives. We limit the execution to the first 5 iterations
+of HPL and to only 8 nodes.
+
+The notebook in the analysis directory also uses outputs from the real
+execution, for comparison.
+
+|-------+--------+----------|
+| [[file:exp_input/simulation/tracing/][input]] | [[file:exp_output/simulation/tracing/][output]] | [[file:exp_analysis/simulation/tracing/][analysis]] |
+|-------+--------+----------|
+
 #+begin_src sh :results output :exports both
 python -m peanut SMPIHPL run tocornebize --deploy debian9-x64-base --cluster dahu --nbnodes 1 \
        --walltime 01:00:00 --expfile exp_input/simulation/{dahu.xml,tracing/exp.csv} \
