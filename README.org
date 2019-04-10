@@ -204,6 +204,23 @@ python -m peanut SMPIHPL run tocornebize --deploy debian9-x64-base --cluster dah
 #+end_src
 * Real execution
 ** Complete execution
+This experiment performs several real complete runs of HPL on the cluster, using
+all the nodes. It will make several runs for each of the different matrix sizes.
+
+Note: we performed this series of experiments once in October 2018 and several
+times in March 2019. It appears that the performance in the most recent runs is
+significantly lower (~10%) than the oldest ones. After some investigations, this
+seems to be caused by a cooling issue affecting four nodes (namely,
+=dahu-{13,14,15,16}=). To validate our work, we compare the simulation predictions
+with the most recents runs of HPL, because the calibrations for dgemm and the
+other kernels have been done after the performance issue started happening.
+
+The output of this experiment is used in the simulation analysis.
+
+|-------+--------|
+| [[file:exp_input/real_execution/complete/][input]] | [[file:exp_output/real_execution/complete/][output]] |
+|-------+--------|
+
 #+begin_src sh :results output :exports both
 python -m peanut HPL run tocornebize --deploy debian9-x64-base --cluster dahu --nbnodes 32 \
        --walltime 13:30:00 --expfile exp_input/real_execution/complete/exp.csv \
