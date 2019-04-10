@@ -4,6 +4,9 @@
 #+LANGUAGE: EN
 #+STARTUP: overview indent inlineimages logdrawer hidestars
 
+This is the artifact repository of an article submitted at the conference
+SC19. A preprint version of the document can be found here *[TODO]*.
+
 * Table of content                                                      :TOC:
 - [[#abstract][Abstract]]
 - [[#introduction][Introduction]]
@@ -40,6 +43,11 @@ predictions within a few percents of real experiments.
 ** Overview
 This document contains links to experimental results as well as a guideline on
 how to reproduce them. We used the [[https://www.grid5000.fr/][Grid5000]] testbed for all our experiments.
+
+The article has been written using Emacs Org Mode. The source of the paper is
+freely available in this [[https://github.com/Ezibenroc/HPL-paper/][repository]]. In particular, the [[https://github.com/Ezibenroc/HPL-paper/blob/master/paper.org][main document]] contains
+the code that was used to download the required data and generate all the
+figures of the paper.
 
 The structure of this repository is the following:
 - In [[file:exp_input][exp_input]] are located the inputs of each experiment (=.csv= files with
