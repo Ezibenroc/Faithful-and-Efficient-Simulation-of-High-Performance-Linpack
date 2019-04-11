@@ -5,7 +5,7 @@
 #+STARTUP: overview indent inlineimages logdrawer hidestars
 
 This is the artifact repository of an article submitted at the conference
-SC19. A preprint version of the document can be found here *[TODO]*.
+SC19. A preprint of the document is [[https://hal.inria.fr/hal-02096571/document][available]].
 
 * Table of content                                                      :TOC:
 - [[#abstract][Abstract]]
